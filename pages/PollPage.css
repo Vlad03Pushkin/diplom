@@ -1,0 +1,17 @@
+.poll-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .poll-page h2 {
+    color: #1976d2;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .poll-page p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+  }
