@@ -1,0 +1,99 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Стили для навигации */
+.navbar {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Стили для основной части приложения */
+.main-content {
+  flex: 1; /* Занимает всё доступное место между навбаром и футером */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+/* Стили для приветственной секции */
+.hero-section {
+  margin-bottom: 30px;
+}
+/* Стили для подвала */
+.footer {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  margin-top: auto;
+}
+
+/* Стили для слайдера изображений */
+.image-slider {
+display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.slider-image {
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/*  Стили для секции информации */
+.gym-info {
+  margin-top: 30px;
+  text-align: left;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+/* Стили для страниц */
+.profile-page,
+.booking-page,
+.reviews-page,
+.poll-page,
+.consultation-page,
+.trainers-page {
+display: flex;
+flex-direction: column;
+  align-items: center;
+}
+body { /* Можно также применить к #root или .app */
+  background-image: url('/public/images/back.jpg'); /* Укажите путь к вашей картинке */
+  background-size: cover; /* Растягиваем изображение на весь экран */
+  background-position: center; /* Центрируем изображение */
+  background-repeat: no-repeat; /* Запрещаем повторение изображения */
+  background-attachment: fixed; /* Фиксируем фон при прокрутке */
+  min-height: 100vh; /* Занимаем всю высоту экрана */
+  margin: 0; /* Убираем отступы по умолчанию */
+}
