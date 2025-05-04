@@ -243,6 +243,27 @@ app.post('/api/feedback', async (req, res) => {
   }
 });
 
+app.get('/api/polls/check', async (req, res) => {
+  try {
+    const token = req.headers.authorization?.split(' ')[1];
+    if (!token) return res.status(401).json({ error: 'Token required' });
+
+    const decoded = jwt.verify(token, jwtSecret);
+    const userId = decoded.user_id;
+    const questionId = req.query.question_id;
+
+    const { rows } = await pool.query(
+      'SELECT 1 FROM polls WHERE user_id = $1 AND question_id = $2 LIMIT 1',
+      [userId, questionId]
+    );
+
+    res.status(rows.length > 0 ? 200 : 404).send();
+  } catch (err) {
+    console.error('Poll check error:', err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
 app.get('/api/polls/active', async (req, res) => {
     try {
       const { rows } = await pool.query(
@@ -757,6 +778,42 @@ app.get('/api/chat/users', async (req, res) => {
   } catch (err) {
       console.error('Users list error:', err);
       res.status(500).json({ error: err.message });
+  }
+});
+
+// Обновление статуса записи
+app.patch('/admin/bookings/:id', isAdmin, async (req, res) => {
+  try {
+      const { status } = req.body;
+      const { id } = req.params;
+      
+      const result = await pool.query(
+          'UPDATE bookings SET status = $1 WHERE booking_id = $2 RETURNING *',
+          [status, id]
+      );
+      
+      res.json(result.rows[0]);
+  } catch (err) {
+      console.error(err);
+      res.status(500).json({ message: 'Ошибка сервера' });
+  }
+});
+
+// Обновление статуса отзыва
+app.patch('/admin/feedback/:id', isAdmin, async (req, res) => {
+  try {
+      const { is_approved } = req.body;
+      const { id } = req.params;
+      
+      const result = await pool.query(
+          'UPDATE feedback SET is_approved = $1 WHERE feedback_id = $2 RETURNING *',
+          [is_approved, id]
+      );
+      
+      res.json(result.rows[0]);
+  } catch (err) {
+      console.error(err);
+      res.status(500).json({ message: 'Ошибка сервера' });
   }
 });
 
