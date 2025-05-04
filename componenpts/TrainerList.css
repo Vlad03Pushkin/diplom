@@ -1,0 +1,61 @@
+.trainer-list {
+    padding: 20px;
+    text-align: center;
+}
+
+.trainer-list h2 {
+    margin-bottom: 20px;
+}
+
+.trainers-grid {
+    display: flex; /* Горизонтальное расположение */
+    flex-wrap: wrap; /* Перенос на новую строку, если не помещаются */
+    justify-content: center; /* Центрирование по горизонтали */
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0;
+    margin: 0;
+}
+
+.trainer-card {
+    width: 300px; /* Задаем ширину для каждой карточки тренера */
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.trainer-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trainer-card.active-trainer {
+    background-color: #f0f0f0;
+}
+
+.trainer-image {
+    width: 150px; /* Задаем ширину для контейнера изображения */
+    height: 150px; /* Задаем высоту для контейнера изображения */
+    margin: 0 auto 10px;
+    border: 2px solid #ccc; /* Рамка вокруг изображения */
+    border-radius: 50%; /* Делаем изображение круглым */
+    overflow: hidden; /* Обрезаем все, что выходит за границы */
+}
+
+.trainer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Масштабируем изображение, чтобы заполнить контейнер */
+}
+
+.trainer-card h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.trainer-card p {
+    font-size: 0.9em;
+    color: #666;
+}

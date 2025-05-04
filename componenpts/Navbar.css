@@ -1,0 +1,54 @@
+.navbar {
+    position: relative; /* Добавляем relative positioning */
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('/public/images/backnav.jpg'); /* Указываем путь к изображению */
+    background-size: cover; /* Растягиваем изображение на всю область */
+    background-position: center; /* Центрируем изображение */
+    background-repeat: no-repeat; /* Запрещаем повторение */
+}
+ 
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+ 
+  .logo {
+    width: 60px; 
+    height: auto;
+}
+
+ 
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    margin-left: 0px; 
+}
+ 
+  .navbar li {
+    margin-left: 20px;
+  }
+ 
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  }
+ 
+  .navbar a:hover {
+    color: #007bff;
+  }
+
+  .navbar ul li a[href="/admin"] {
+    color: #ff5722;
+    font-weight: bold;
+}
+
+.navbar ul li a[href="/admin"]:hover {
+    color: #e64a19;
+}

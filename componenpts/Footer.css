@@ -1,0 +1,29 @@
+.footer {
+    background-color: #9a9c9f;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+   }
+   
+   .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+   }
+   
+   .contact-info {
+    margin-top: 15px;
+   }
+   
+   .contact-info p {
+    margin: 5px 0;
+   }
+   
+   .contact-info a {
+    color: #fff;
+    text-decoration: none;
+   }
+   
+   .contact-info a:hover {
+    text-decoration: underline;
+   }

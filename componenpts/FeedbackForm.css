@@ -1,0 +1,126 @@
+.reviews-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.error-message {
+    color: #d32f2f;
+    background-color: #fde0e0;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.feedback-section {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.rating-stars {
+    display: flex;
+    gap: 5px;
+    font-size: 24px;
+}
+
+.star {
+    cursor: pointer;
+    color: #ccc;
+}
+
+.star.filled {
+    color: #ffc107;
+}
+
+textarea {
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.submit-button {
+    align-self: flex-start;
+    padding: 10px 20px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #1565c0;
+}
+
+.feedbacks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feedback-item {
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.feedback-item {
+    background-color: #ffffff; /* Белый фон */
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.feedback-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.feedback-user {
+    font-weight: bold;
+}
+
+.feedback-rating {
+    color: #ffc107;
+    font-size: 18px;
+}
+
+.feedback-date {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+}
+
+.login-prompt {
+    text-align: center;
+    padding: 20px;
+    background: #fff8e1;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}

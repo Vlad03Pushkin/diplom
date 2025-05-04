@@ -1,0 +1,93 @@
+.poll-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .poll-question {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    text-align: left; /* Добавлено для единообразия */
+  }
+  
+  .poll-question h4 {
+    margin-bottom: 15px;
+    color: #333;
+    text-align: left; /* Явное указание выравнивания */
+    padding-left: 10px; /* Добавляем отступ для лучшего вида */
+  }
+  
+  .poll-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left; /* Выравниваем варианты по левому краю */
+    padding-left: 20px; /* Добавляем отступ для вариантов */
+  }
+  
+  .poll-options label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    justify-content: flex-start; /* Гарантируем выравнивание по левому краю */
+  }
+  
+  /* Остальные стили остаются без изменений */
+  .poll-options input[type="radio"] {
+    margin-right: 8px;
+  }
+  
+  .submit-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+  
+  .submit-button:hover {
+    background-color: #1565c0;
+  }
+  
+  .error-message {
+    color: #d32f2f;
+    background-color: #fde0e0;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .poll-thank-you {
+    text-align: center;
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .poll-thank-you h3 {
+    color: #1976d2;
+    margin-bottom: 10px;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+  }
